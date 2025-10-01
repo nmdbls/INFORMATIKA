@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 int main()
 {
     float x, y, C;
@@ -11,4 +12,5 @@ int main()
     std::cout << R << " " << S << std::endl;
     C = std::max(R, S);
     std::cout << C;
+    system("pause");
 }

@@ -1,0 +1,104 @@
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+
+int main()
+{
+    sf::RenderWindow window(sf::VideoMode(800, 600), "title");
+
+    window.clear(sf::Color(135, 206, 250));
+
+    sf::RectangleShape rectangle;
+    rectangle.setSize(sf::Vector2f(150, 180));
+    rectangle.setPosition(300, 250);
+    rectangle.setFillColor(sf::Color(210, 180, 140));
+    window.draw(rectangle);
+
+    sf::RectangleShape rectangle2;
+    rectangle2.setSize(sf::Vector2f(18, 24));
+    rectangle2.setPosition(367, 227);
+    rectangle2.setFillColor(sf::Color(180, 180, 180));
+    window.draw(rectangle2);
+
+    sf::RectangleShape rectangle3;
+    rectangle3.setSize(sf::Vector2f(70, 43));
+    rectangle3.setPosition(341, 187);
+    rectangle3.setFillColor(sf::Color(180, 180, 180));
+    window.draw(rectangle3);
+
+    sf::RectangleShape rectangle4;
+    rectangle4.setSize(sf::Vector2f(180, 45));
+    rectangle4.setPosition(285, 400);
+    rectangle4.setFillColor(sf::Color(100, 100, 100));
+    window.draw(rectangle4);
+
+    sf::RectangleShape rectangle5;
+    rectangle5.setSize(sf::Vector2f(18, 90));
+    rectangle5.setPosition(273, 260);
+    rectangle5.setFillColor(sf::Color(180, 180, 180));
+    window.draw(rectangle5);
+
+    sf::RectangleShape rectangle6;
+    rectangle6.setSize(sf::Vector2f(18, 90));
+    rectangle6.setPosition(457, 260);
+    rectangle6.setFillColor(sf::Color(180, 180, 180));
+    window.draw(rectangle6);
+
+    sf::RectangleShape rectangle7;
+    rectangle7.setSize(sf::Vector2f(40, 17));
+    rectangle7.setPosition(464, 333);
+    rectangle7.setFillColor(sf::Color(100, 100, 100));
+    window.draw(rectangle7);
+
+    sf::RectangleShape rectangle8;
+    rectangle8.setSize(sf::Vector2f(40, 17));
+    rectangle8.setPosition(254, 333);
+    rectangle8.setFillColor(sf::Color(100, 100, 100));
+    window.draw(rectangle8);
+
+    sf::CircleShape shape1(35);
+    shape1.setPosition(305, 140);
+    shape1.setFillColor(sf::Color(255, 255, 255));
+    window.draw(shape1);
+
+    sf::CircleShape shape2(35);
+    shape2.setPosition(375, 140);
+    shape2.setFillColor(sf::Color(255, 255, 255));
+    window.draw(shape2);
+
+    sf::CircleShape shape3(15);
+    shape3.setPosition(395, 162);
+    shape3.setFillColor(sf::Color(0, 0, 0));
+    window.draw(shape3);
+
+    sf::CircleShape shape4(15);
+    shape4.setPosition(325, 162);
+    shape4.setFillColor(sf::Color(0, 0, 0));
+    window.draw(shape4);
+
+    sf::CircleShape shape5(15);
+    shape5.setPosition(295, 407);
+    shape5.setFillColor(sf::Color(40, 40, 40));
+    window.draw(shape5);
+
+    sf::CircleShape shape6(15);
+    shape6.setPosition(335, 407);
+    shape6.setFillColor(sf::Color(40, 40, 40));
+    window.draw(shape6);
+
+    sf::CircleShape shape7(15);
+    shape7.setPosition(385, 407);
+    shape7.setFillColor(sf::Color(40, 40, 40));
+    window.draw(shape7);
+
+    sf::CircleShape shape8(15);
+    shape8.setPosition(425, 407);
+    shape8.setFillColor(sf::Color(40, 40, 40));
+    window.draw(shape8);
+
+    window.display();
+
+    sf::sleep(sf::seconds(5));
+
+    return 0;
+}

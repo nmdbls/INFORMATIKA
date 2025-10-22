@@ -1,0 +1,27 @@
+def calculateProizv(mass, lenn):
+    pr = 1
+    for i in range(lenn):
+        pr *= mass[i]
+    return pr
+
+
+def findArrayWithMaxProiz(masa, masb):
+    pra = calculateProizv(masa, 5)
+    prb = calculateProizv(masb, 4)
+    if pra >= prb:
+        print(f"Массив A: {pra}")
+        print(f"Массив B: {prb}")
+    else:
+        print(f"Массив B: {prb}")
+        print(f"Массив A: {pra}")
+
+print('Введите 5 значений для массива А:')
+masa = []
+masb = []
+for i in range(5):
+    masa.append(int(input()))
+print('Введите 4 значений для массива А:')
+for i in range(4):
+    masb.append(int(input()))
+
+findArrayWithMaxProiz(masa, masb)

@@ -1,0 +1,22 @@
+def findArrayPeresKrTren(mna, mnb):
+    peresech = mna.intersection(mnb)
+    kratnotrem = set()
+    for i in peresech:
+        if i % 3 == 0:
+            kratnotrem.add(i)
+    return ' '.join(str(x) for x in kratnotrem)
+
+
+print("Введите размер множеств (N): ")
+N = int(input())
+print(f'Введите {N} значений для массива А:')
+mna = set()
+mnb = set()
+for i in range(N):
+    mna.add(int(input()))
+print(f'Введите {N} значений для массива B:')
+for i in range(N):
+    mnb.add(int(input()))
+
+print("Пересечение чисел кратных трем:")
+print(findArrayPeresKrTren(mna, mnb))

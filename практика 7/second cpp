@@ -1,0 +1,51 @@
+#include <iostream>
+#include <set>
+#include <algorithm>
+
+
+void findArrayPeresKrTren(std::set<int> setA,std::set<int> setB, int size) {
+    std::set<int> peresech;
+    std::set_intersection(setA.begin(), setA.end(),
+        setB.begin(), setB.end(),
+        std::inserter(peresech, peresech.begin()));
+    std::set<int> kratntrem;
+    for (int ch : peresech) {
+        if (ch % 3 == 0) {
+            kratntrem.insert(ch);
+        }
+    }
+    std::cout << "Пересечение чисел кратных трем:" << std::endl;
+    for (int ch : kratntrem) {
+        std::cout << ch << " ";
+    }
+    std::cout << std::endl;
+}
+    
+int main() {
+    int N, ch; 
+
+    std::cout << "Введите размер множеств (N): ";
+    std::cin >> N;
+
+    std::set<int> A;
+    std::set<int> B;
+
+
+    std::cout << "Введите " << N << " элементов для множества A:" << std::endl;
+    for (int i = 0; i < N; i++) {
+        std::cin >> ch;
+        A.insert(ch);
+    }
+
+    std::cout << "Введите " << N << " элементов для множества B:" << std::endl;
+    for (int i = 0; i < N; i++) {
+        std::cin >> ch;
+        B.insert(ch);
+    }
+
+
+    findArrayPeresKrTren(A, B, N);
+
+
+    return 0;
+}
